@@ -1,22 +1,19 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React, { VFC } from 'react';
+import { Outlet } from 'react-router-dom';
 
-const Navbar = () => {
+import { Navbar } from 'components/Navbar';
+
+import './Layout.scss';
+
+const Layout: VFC = () => {
+  const className = 'layout';
+
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/sorting-algorithm">Sorting Algorithm</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className={className}>
+      <Navbar />
       <Outlet />
-    </>
+    </div>
   );
 };
 
-export default Navbar;
+export default Layout;

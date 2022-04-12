@@ -1,0 +1,25 @@
+.navbar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-self: flex-start;
+  max-width: 124px;
+  border-right: 1px solid grey;
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12vh 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  &_list-item {
+    text-align: center;
+  }
+}
